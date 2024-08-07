@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 export interface ContainerProps {
   /**
@@ -21,6 +21,6 @@ export const Container = ({
   classNames,
 }: ContainerProps) => {
   const containerWidth = type === "container" ? "w-[1240px]" : "w-full";
-  const classes = `mx-auto ${containerWidth} ${classNames}`;
+  const classes = `mx-auto px-2 ${containerWidth} ${classNames}`;
   return <div className={classes}>{children}</div>;
 };
