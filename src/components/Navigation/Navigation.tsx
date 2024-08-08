@@ -20,6 +20,9 @@ export interface MenuItemType {
 }
 
 export interface NavigationProps {
+  /**
+   * Add the list of Menu Items
+   */
   menuItems: MenuItemType[];
 }
 
