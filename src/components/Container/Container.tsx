@@ -20,7 +20,7 @@ export const Container = ({
   children,
   classNames,
 }: ContainerProps) => {
-  const containerWidth = type === "container" ? "w-[1240px]" : "w-full";
+  const containerWidth = type === "container" ? "lg:w-[1240px] w-full" : "w-full";
   const classes = `mx-auto px-2 ${containerWidth} ${classNames}`;
   return <div className={classes}>{children}</div>;
 };

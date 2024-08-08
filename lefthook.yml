@@ -1,16 +1,16 @@
 # commit-msg:
 #   commands:
 #     lint-commit-msg:
-#       run: npx run commitlint --edit
+#       run: pnpm commitlint --edit
 
 pre-commit:
   parallel: true
   commands:
     lint:
       glob: "*.{js,ts,jsx,tsx}"
-      run: npm run lint {staged_files}
+      run: pnpm lint {staged_files}
     # test:
     #   glob: "*.{js,ts,jsx,tsx}"
-    #   run: npm run test
+    #   run: pnpm test
     typecheck:
-      run: npm run typecheck
+      run: pnpm typecheck
