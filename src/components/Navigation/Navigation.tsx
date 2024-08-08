@@ -1,5 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 export interface SubMenuItemType {
   name: string;
@@ -7,8 +14,9 @@ export interface SubMenuItemType {
 }
 
 export interface MenuItemType {
-  name: string | SubMenuItemType[];
+  name: string;
   url?: string;
+  dropdownItems?: SubMenuItemType[];
 }
 
 export interface NavigationProps {
@@ -21,16 +29,23 @@ export const Navigation = ({ menuItems }: NavigationProps) => {
       <ul className="flex gap-4">
         {menuItems.map((item, index) => (
           <li key={`${item.url}_${index}`}>
-            {typeof item.name === "string" ? (
-              <Link href={item.url ?? "#"}>{item.name}</Link>
+            {item.dropdownItems ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <span className="flex gap-1">
+                    Shop <ChevronDown className="w-4"/>
+                  </span>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {item.dropdownItems.map((subItem) => (
+                    <DropdownMenuItem key={subItem.name}>
+                      <Link href={subItem.url}>{subItem.name}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             ) : (
-              <ul>
-                {item.name.map((subItem) => (
-                  <li key={subItem.name}>
-                    <Link href={subItem.url}>{subItem.name}</Link>
-                  </li>
-                ))}
-              </ul>
+              <Link href={item.url ?? "#"}>{item.name}</Link>
             )}
           </li>
         ))}
