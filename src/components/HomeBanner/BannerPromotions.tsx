@@ -1,4 +1,3 @@
-import React from "react";
 import { BannerPromotionsType } from "./BannerContent";
 import { classNames } from "@/utils/classNames";
 import { useIsBreakpoint } from "@/hooks/useIsBreakpoint/useIsBreakpoint";

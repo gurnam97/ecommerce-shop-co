@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -36,7 +35,7 @@ export const Navigation = ({ menuItems }: NavigationProps) => {
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <span className="flex gap-1">
-                    Shop <ChevronDown className="w-4"/>
+                    Shop <ChevronDown className="w-4" />
                   </span>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
