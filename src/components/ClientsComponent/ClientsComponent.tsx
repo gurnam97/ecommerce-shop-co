@@ -3,13 +3,12 @@ import { Container } from "../Container";
 import { classNames } from "@/utils/classNames";
 import { useIsBreakpoint } from "@/hooks/useIsBreakpoint/useIsBreakpoint";
 import { Breakpoint } from "@/types/breakpoint";
-
-export interface LogoInputType {
-  url: string;
-  alt: string;
-}
+import { LogoInputType } from "./types";
 
 export interface ClientsComponentProps {
+  /**
+   * Add Clients logos
+   */
   logos: LogoInputType[];
 }
 
