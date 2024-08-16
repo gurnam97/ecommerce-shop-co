@@ -1,11 +1,25 @@
 import Image from "next/image";
 
 interface RatingProps {
+  /**
+   * Add rating of product
+   */
   rating: number;
+  /**
+   * Add maximum rating of product
+   */
   maxRating?: number;
+  /**
+   * Display the average rating number 
+   */
+  displayNumber?: boolean;
 }
 
-export const Rating = ({ rating, maxRating = 5 }: RatingProps) => {
+export const Rating = ({
+  rating,
+  maxRating = 5,
+  displayNumber,
+}: RatingProps) => {
   const productRating = Math.floor(rating);
   const hasHalfRating = rating % 1 !== 0;
 
@@ -28,9 +42,11 @@ export const Rating = ({ rating, maxRating = 5 }: RatingProps) => {
           height={18}
         />
       )}
-      <span className="text-xs lg:text-sm text-[#00000099] ml-3">
-        {rating.toFixed(1)}/{maxRating}
-      </span>
+      {displayNumber ? (
+        <span className="text-xs lg:text-sm text-[#00000099] ml-3">
+          {rating.toFixed(1)}/{maxRating}
+        </span>
+      ) : null}
     </div>
   );
 };

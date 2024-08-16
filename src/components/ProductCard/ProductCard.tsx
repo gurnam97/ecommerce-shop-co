@@ -2,11 +2,14 @@ import Image from "next/image";
 import { ProductType } from "./types";
 import { Breakpoint } from "@/types/breakpoint";
 import { Price } from "./Price";
-import { Rating } from "./Ratings";
+import { Rating } from "../Rating/Rating";
 import { classNames } from "@/utils/classNames";
 import { useIsBreakpoint } from "@/hooks/useIsBreakpoint/useIsBreakpoint";
 
 export interface ProductCardProps {
+  /**
+   * Add Product data object
+   */
   product: ProductType;
 }
 

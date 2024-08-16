@@ -1,6 +1,9 @@
 import { PriceType } from "./types";
 
 export interface PriceProps {
+  /**
+   * Add Price of product
+   */
   price: PriceType;
 }
 

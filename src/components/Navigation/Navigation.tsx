@@ -6,17 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
-
-export interface SubMenuItemType {
-  name: string;
-  url: string;
-}
-
-export interface MenuItemType {
-  name: string;
-  url?: string;
-  dropdownItems?: SubMenuItemType[];
-}
+import { MenuItemType } from "./types";
 
 export interface NavigationProps {
   /**

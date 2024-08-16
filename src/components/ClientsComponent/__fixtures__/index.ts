@@ -1,4 +1,4 @@
-import { LogoInputType } from "..";
+import { LogoInputType } from "../types";
 
 export const clientLogos: LogoInputType[] = [
   {

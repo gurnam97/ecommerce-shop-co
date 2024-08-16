@@ -1,4 +1,4 @@
-import { MenuItemType } from "@/components/Navigation";
+import { MenuItemType } from "@/components/Navigation/types";
 
 export const menuItemsList: MenuItemType[] = [
   {
