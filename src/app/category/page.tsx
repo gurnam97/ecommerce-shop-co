@@ -2,11 +2,12 @@
 
 import React from "react";
 import { Homepage } from "@/components/Homepage";
+import { CategoryPage } from "@/components/CategoryPage";
 
-export default function Home() {
+export default function Category() {
   return (
     <main>
-      <Homepage />
+      <CategoryPage />
     </main>
   );
 }

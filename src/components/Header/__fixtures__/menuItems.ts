@@ -5,8 +5,8 @@ export const menuItemsList: MenuItemType[] = [
     name: "Shop",
     url: "/shop",
     dropdownItems: [
-      { name: "On Sale", url: "/sale" },
-      { name: "On Sale", url: "/sale" },
+      { name: "On Sale", url: "/category" },
+      { name: "On Sale", url: "/category" },
     ],
   },
   { name: "On Sale", url: "/sale" },
