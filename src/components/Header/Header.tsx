@@ -28,7 +28,7 @@ export const Header = ({ isTopBar }: HeaderProps) => {
   return (
     <>
       {isTopBar ? <TopBar /> : null}
-      <div className="py-4">
+      <div className="py-5">
         <Container classNames="grid grid-cols-[auto_1fr_auto] lg:grid-cols-[auto_1fr_1.5fr_auto] items-center gap-x-4 lg:gap-x-8">
           {isMobile && <MenuIcon />}
           <Logo />

@@ -12,8 +12,8 @@ export const CategoryHeader = () => {
       <div>
         <h3 className="text-[32px] font-semibold">Casual</h3>
       </div>
-      <div className="flex flex-wrap justify-between gap-8">
-        <div className="text-[#00000099] pb-2">
+      <div className="flex flex-wrap justify-between gap-8 pb-2">
+        <div className="text-[#00000099]">
           <p>Showing 1-10 of 100 Products</p>
         </div>
         <div>
