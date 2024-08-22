@@ -6,7 +6,7 @@ import {
   useState,
   useRef,
 } from "react";
-import "./multiRangeSlider.css";
+import "./MultiRangeSlider.css";
 import { classNames } from "@/utils/classNames";
 
 interface MultiRangeSliderProps {

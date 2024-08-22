@@ -8,7 +8,6 @@ export interface SizeFilterProps {
 export const SizeFilter = ({ sizes }: SizeFilterProps) => {
   return (
     <div className="flex flex-wrap gap-4">
-      {/* <div className="flex"> */}
       {sizes.map((size) => (
         <Toggle key={size.name} className="p-0 rounded-full">
           <div
@@ -21,7 +20,6 @@ export const SizeFilter = ({ sizes }: SizeFilterProps) => {
           </div>
         </Toggle>
       ))}
-      {/* </div> */}
     </div>
   );
 };
