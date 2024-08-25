@@ -7,8 +7,11 @@ export interface SizeFilterComponentProps {
   isActive?: boolean;
 }
 
-export const SizeFilterComponent = ({ name, isActive }: SizeFilterComponentProps) => {
-  const [toggle, setToggle] = useState(false);
+export const SizeFilterComponent = ({
+  name,
+  isActive,
+}: SizeFilterComponentProps) => {
+  const [toggle, setToggle] = useState(isActive ?? false);
 
   const onSizeChange = () => {
     setToggle(!toggle);
@@ -19,7 +22,6 @@ export const SizeFilterComponent = ({ name, isActive }: SizeFilterComponentProps
       <div
         className={classNames(
           "rounded-full bg-[#F0F0F0] py-2.5 px-5 text-[#00000099]",
-          isActive && "bg-black text-white",
           toggle && "bg-black text-white"
         )}
       >
