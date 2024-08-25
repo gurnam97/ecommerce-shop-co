@@ -1,5 +1,5 @@
 export const sizes = [
-  { name: "Large", isActive: false },
+  { name: "Large", isActive: true },
   { name: "X-Large", isActive: false },
   { name: "XX-Large", isActive: false },
   { name: "XX-Small", isActive: false },

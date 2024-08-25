@@ -1,9 +1,9 @@
-import { ColorSwatches } from "./ColorSwatches";
+import { ColorSwatches } from "../ColorSwatches";
 import { colorSwatches } from "./__fixtures__/colorSwatches";
-import { SizeFilter } from "./SizeFilter";
 import { sizes } from "./__fixtures__/sizes";
 import { CategoryFilter } from "./CategoryFilter";
 import { categoryFiltersData } from "./__fixtures__/categoryFilters";
+import { SizeFilter } from "../SizeFilter/SizeFilter";
 
 export interface FilterProps {
   type: "category" | "size" | "color";
