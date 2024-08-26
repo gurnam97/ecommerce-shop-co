@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Breadcrumbs } from "../Breadcrumbs";
 import { CategoryHeader } from "../CategoryHeader/CategoryHeader";
 import { CategoyFilters } from "../CategoyFilters/CategoyFilters";
@@ -7,15 +8,23 @@ import { ProductListing } from "../ProductListing";
 import { productsPLP } from "../ProductListing/__fixtures__";
 
 export const CategoryPage = () => {
+  const [isFilterMobileActive, setIsfilterMobileActive] = useState(false);
+  const isMobileFiltersActive = () => {
+    setIsfilterMobileActive(!isFilterMobileActive);
+  };
+
   return (
     <Container>
       <Breadcrumbs />
-      <div className="grid grid-cols-[1.5fr_5fr] gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_5fr] gap-6">
         <div>
-          <CategoyFilters />
+          <CategoyFilters
+            isFilterMobileActive={isFilterMobileActive}
+            isMobileFiltersActive={isMobileFiltersActive}
+          />
         </div>
         <div>
-          <CategoryHeader />
+          <CategoryHeader isMobileFiltersActive={isMobileFiltersActive} />
           <ProductListing products={productsPLP} type="PLP" />
           <div className="pt-9 border-t mt-9">
             <PaginationComponent />

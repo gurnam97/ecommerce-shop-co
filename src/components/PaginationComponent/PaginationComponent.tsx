@@ -7,8 +7,12 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { useIsBreakpoint } from "@/hooks/useIsBreakpoint/useIsBreakpoint";
+import { Breakpoint } from "@/types/breakpoint";
 
 export const PaginationComponent = () => {
+  const isMobile = useIsBreakpoint(Breakpoint.Small, Breakpoint.Medium);
+
   return (
     <Pagination>
       <PaginationContent className="w-full justify-between">
@@ -41,16 +45,20 @@ export const PaginationComponent = () => {
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" className="text-[#00000080]">
-              8
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" className="text-[#00000080]">
-              9
-            </PaginationLink>
-          </PaginationItem>
+          {!isMobile && (
+            <>
+              <PaginationItem>
+                <PaginationLink href="#" className="text-[#00000080]">
+                  8
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#" className="text-[#00000080]">
+                  9
+                </PaginationLink>
+              </PaginationItem>
+            </>
+          )}
           <PaginationItem>
             <PaginationLink href="#" className="text-[#00000080]">
               10
