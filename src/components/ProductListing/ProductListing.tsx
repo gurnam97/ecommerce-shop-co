@@ -35,7 +35,7 @@ export const ProductListing = ({
       classNames={classNames(
         "py-20",
         border && "border-b",
-        type === "PLP" && "py-0 lg:w-full lg:px-0"
+        type === "PLP" && "py-0 lg:w-full lg:px-0 !px-0"
       )}
     >
       {category ? (
